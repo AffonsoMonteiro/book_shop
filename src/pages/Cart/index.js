@@ -1,7 +1,17 @@
 import React from 'react';
 
+import { Container, CardProduct } from './styled'
+
 export default function Cart() {
     return (
-        <h1>Carrinho</h1>
+        <Container>
+            <CardProduct>
+            
+            </CardProduct>
+
+            <footer>
+                <button></button>
+            </footer>
+        </Container>
     )
 }

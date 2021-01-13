@@ -18,7 +18,7 @@ export default function Header() {
                 </div>
             </Link>
 
-            <Cart to='/cart'>
+            <Cart to="/cart">
                 <div className="cart">
                     <strong>Meu carrinho</strong>
                     <span> 3 itens </span>

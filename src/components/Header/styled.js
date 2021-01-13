@@ -29,7 +29,7 @@ export const Container = styled.div `
 
  `
 
- export const Cart = styled(Link) `
+export const Cart = styled(Link) `
     display: flex;
     align-items: center;
     text-decoration: none;

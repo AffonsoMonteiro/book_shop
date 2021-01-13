@@ -9,8 +9,8 @@ import Cart from './pages/Cart'
 export default function Routes() {
     return (
         <Switch>
-            <Route> 
-                <Home path="/" exact />
+            <Route path="/" exact> 
+                <Home />
             </Route>
 
             <Route path="/cart"> 
