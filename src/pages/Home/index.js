@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md'
+
+import { formatPrice } from '../../helpers/format'
 import api from '../../helpers/api'
 
 import { ListBook } from './styled'
@@ -25,7 +27,7 @@ export default function Home() {
                     <img src={i.image} alt={i.title} />
 
                     <strong>{i.title}</strong>
-                    <span>R$ {i.price}</span>
+                    <span>R$ {formatPrice( i.price)}</span>
 
                     <button type="button">
                         <div className="CartIcon">
