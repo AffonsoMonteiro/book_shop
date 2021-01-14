@@ -94,7 +94,7 @@ export default function Home() {
             <li> 
                 <img src="https://m.media-amazon.com/images/I/810Znwbjy3L._AC_UY218_.jpg" alt="" />
 
-                <strong>Fogo & Sangue</strong>
+                <strong>Fogo e Sangue</strong>
                 <span>R$ 34,90</span>
 
                 <button type="button">

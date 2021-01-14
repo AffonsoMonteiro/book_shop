@@ -42,7 +42,7 @@ export default function Cart() {
                             <strong  >R$ 69,80</strong>
                         </td>
                         <td  >
-                            <button type="button" className="btnRemove" data-tip="Excluir"  > 
+                            <button type="button" className="btnRemove" data-tip="Remover"  > 
                                 <MdDelete size={20}  />
                             </button>
                         </td>

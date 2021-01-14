@@ -1,0 +1,59 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "O último desejo - The Witche",
+            "price": "41.5",
+            "image": "https://m.media-amazon.com/images/I/61YBONj8-QL._AC_UY218_.jpg"
+        },
+
+        {
+            "id": 2,
+            "title": "Tempo do desprezo - The Witcher",
+            "price": "45.9",
+            "image": "https://m.media-amazon.com/images/I/618iEKbcBDL._AC_UY218_.jpg"
+        },
+
+        {
+            "id": 3,
+            "title":"Batismo de fogo - The Witcher" ,
+            "price":"34.9" ,
+            "image":"https://m.media-amazon.com/images/I/618r42IcwRL._AC_UY218_.jpg" 
+        },
+
+        {
+            "id": 4,
+            "title":"A Espada do Destino - The Witcher" ,
+            "price":"33.9" ,
+            "image":"https://m.media-amazon.com/images/I/61ZdevvEQiL._AC_UY218_.jpg" 
+        },
+
+        {
+            "id": 5,
+            "title":"O Sangue dos Elfos - The Witcher" ,
+            "price":"39.9" ,
+            "image":"https://m.media-amazon.com/images/I/61iT2u7EGhL._AC_UY218_.jpg" 
+        },
+
+        {
+            "id": 6,
+            "title":"A Senhora do lago - The Witcher" ,
+            "price":"48.9" ,
+            "image":"https://m.media-amazon.com/images/I/71QPDt8hYrL._AC_UY218_.jpg" 
+        },
+
+        {
+            "id": 7,
+            "title":"Fogo & Sangue" ,
+            "price":"34.9" ,
+            "image":"https://m.media-amazon.com/images/I/810Znwbjy3L._AC_UY218_.jpg" 
+        },
+
+        {
+            "id": 8,
+            "title":"A fúria dos reis: As Crônicas de Gelo e Fogo" ,
+            "price":"63.9" ,
+            "image":"https://m.media-amazon.com/images/I/91PglZzF9kL._AC_UY218_.jpg" 
+        }
+    ]
+}
