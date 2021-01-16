@@ -1,46 +1,59 @@
 import React, { useState, useEffect } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md'
+import { useDispatch } from 'react-redux'
 
 import { formatPrice } from '../../helpers/format'
 import api from '../../helpers/api'
+
+import * as CartActions from '../../store/modules/cart/actions'
 
 import { ListBook } from './styled'
 
 export default function Home() {
 
-    const [ listBook, setListBook] = useState([])
+    const dispatch = useDispatch()
 
-    useEffect( () => {
-        const getBook = async () => {
-            const bookList = await api.getBookList()
+    const [ products, setProducts] = useState([])
 
-            setListBook(bookList)
+    useEffect(() => {
+        async function loadProducts() {
+
+            const response = await api.get('products')
+
+            const data = response.data.map(product => ({
+                ... product,
+                priceFormatted: formatPrice(product.price)
+            }))
+            setProducts(data)
         }
-        getBook()
-    }, []) 
 
-    return (
+        loadProducts()
+    }, [])
+
+    
+
+   function handleAddProduct(product) {
+       dispatch(CartActions.addToCart(product))
+    }
         
+    return (
         <ListBook>
-            {listBook.map((i,k ) => 
-                <li key={k}> 
-                    <img src={i.image} alt={i.title} />
+            {products.map( product => (
+                <li key={product.id}> 
+                    <img src={product.image} alt={product.title} />
 
-                    <strong>{i.title}</strong>
-                    <span>R$ {formatPrice( i.price)}</span>
+                    <strong>{product.title}</strong>
+                    <span> {product.priceFormatted }</span>
 
-                    <button type="button">
+                    <button type="button" onClick={() => handleAddProduct(product)}>
                         <div className="CartIcon">
                             <MdAddShoppingCart size={16} color="#FFF" />
                         </div>
                         <span>Adicionar ao carrinho</span>
                     </button>
                 </li>
-            )}
-            
-
-            
-               
+            ))}
+   
         </ListBook>
-    )
-}
+        )   
+    }
