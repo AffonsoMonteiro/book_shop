@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {MdRemoveCircleOutline, MdAddCircleOutline, MdDelete} from 'react-icons/md'
 import ReactTooltip from 'react-tooltip';
 
@@ -25,11 +25,11 @@ import * as CartActions from '../../store/modules/cart/actions'
 
 
     function increment(product) {
-        dispatch(CartActions.upadateAmount(product.id, product.amount + 1))
+        dispatch(CartActions.updateAmount(product.id, product.amount + 1))
     }
 
     function decrement(product) {
-        dispatch(CartActions.upadateAmount(product.id, product.amount - 1))
+        dispatch(CartActions.updateAmount(product.id, product.amount - 1))
     }
     
     return (

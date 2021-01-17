@@ -28,7 +28,7 @@ export default function cart(state = [], action) {
                }
            })
 
-           case 'UPADATE_AMOUNT': {
+           case 'UPDATE_AMOUNT': {
                if(action.amount <= 0) {
                    return state
                }

@@ -12,9 +12,9 @@ export function removeFromCart(id) {
     } 
 }
 
-export function upadateAmount(id, amount) {
+export function updateAmount(id, amount) {
     return {
-        type: 'UPADATE_AMOUNT',
+        type: 'UPDATE_AMOUNT',
         id,
         amount,
     }
