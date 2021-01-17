@@ -6,7 +6,7 @@ export const ListBook = styled.ul `
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     list-style: none;
-    margin-top: 10px;
+    margin: 30px;
     
 
     li { 
@@ -16,6 +16,7 @@ export const ListBook = styled.ul `
         border-radius: 4px;
         padding: 20px;
 
+       
         img {
             max-width: 250px;   
             
@@ -45,6 +46,11 @@ export const ListBook = styled.ul `
 
             display: flex;
             align-items: center;
+            transition: all .3s;
+
+            &:hover {
+                opacity: 0.9;
+            }
 
             .CartIcon {
                 display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {MdRemoveCircleOutline, MdAddCircleOutline, MdDelete} from 'react-icons/md'
-import ReactTooltip from 'react-tooltip';
+
 
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -69,7 +69,7 @@ import * as CartActions from '../../store/modules/cart/actions'
                                 <strong> {product.subtotal} </strong>
                             </td>
                              <td  >
-                                <button type="button" onClick={() => dispatch(CartActions.removeFromCart(product.id))} className="btnRemove" data-tip="Remover"  > 
+                                <button type="button" onClick={() => dispatch(CartActions.removeFromCart(product.id))} className="btnRemove"   > 
                                     <MdDelete size={20}  />
                                 </button>
                             </td>
@@ -86,7 +86,7 @@ import * as CartActions from '../../store/modules/cart/actions'
                     <strong> {total} </strong>
                 </div>
             </footer>
-      <ReactTooltip place="top" effect="solid" />
+      
 
         </Container>
     )
