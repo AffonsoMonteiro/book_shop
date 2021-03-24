@@ -1,7 +1,5 @@
 <h1 align="center">
-    <img alt="React RocketShoes" src="https://res.cloudinary.com/lukemorales/image/upload/v1562696000/readme_logos/react-rocketshoes_jy1lze.png" />
-    <br>
-    React RocketShoes
+    BookShop
 </h1>
 
 <h4 align="center">
@@ -41,7 +39,7 @@
   </a>
 </p>
 
-## :rocket: Technologies
+<h2> Technologies </h2>
 
 This project was developed at the [RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp) with the following technologies:
 
