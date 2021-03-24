@@ -56,7 +56,7 @@ import * as CartActions from '../../store/modules/cart/actions'
                     <div>
                     <h2>Oops...</h2>
                     <p>Parece que seu carrinho de compras está vazio!</p>
-                    <StartShopping to="/">Start Shopping</StartShopping>
+                    <StartShopping to="/">Comece a comprar </StartShopping>
                     </div>
                 </EmptyCart>
             ) : (
@@ -109,15 +109,15 @@ import * as CartActions from '../../store/modules/cart/actions'
                 <button type="button" >Finalizar pedido</button>
 
                 <div className="total">
-                    <div>
-                        <span>Subtotal</span>
-                        <strong> {formatPrice(subtotal) } </strong>
-                    </div> 
-                   
                     <div >
-                        <span>Disconto</span>
+                        <span>Desconto</span>
                         <strong> {formatPrice(discount)} </strong>
                     </div>
+
+                    <div>
+                        <span>Subtotal</span>
+                        <strong> {formatPrice(subtotal)  } </strong>
+                    </div> 
                     
                     <div>
                         <span>Total</span>

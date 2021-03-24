@@ -32,6 +32,7 @@ export const Container = styled.div `
         .total {
             display: flex;
             align-items: baseline;
+            flex-direction: column;
 
             span{
                 color: #888;
