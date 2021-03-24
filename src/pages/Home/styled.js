@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const ListBook = styled.ul ` 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
     list-style: none;
     margin: 30px;
     
@@ -62,6 +62,37 @@ export const ListBook = styled.ul `
                 }
             }
 
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(3 , 1fr);
+
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: repeat(2 , 1fr);
+
+        li {
+
+            img {
+                width: 120px;
+            }
+
+            strong {
+                font-size: 12px;
+            }
+
+            button {
+                
+                .CartIcon {
+                    padding: 10px;
+
+                    svg {
+                        margin-right: 0px;
+                    }
+                }
+            }
         }
     }
 `

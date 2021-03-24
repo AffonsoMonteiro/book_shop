@@ -25,7 +25,7 @@ import Modal from '../Modal'
         <Container>
             <Link to='/' >
                 <div className="logo">
-                    <GiWhiteBook size={35} color="#FFF"  />
+                    <GiWhiteBook  color="#FFF"  />
                     <span>BookShop</span> 
                 </div>
             </Link>
@@ -39,7 +39,7 @@ import Modal from '../Modal'
                     <strong>Meu carrinho</strong>
                     <span> {cartSize} itens </span>
                 </div>
-                <MdShoppingCart size={35} color="#FFF" />
+                <MdShoppingCart color="#FFF" />
             </Cart>
             <Modal status={modalStatus} setStatus={setModalStatus} />
         </Container>

@@ -75,14 +75,16 @@ import * as CartActions from '../../store/modules/cart/actions'
                    { cart.map(product => (
                         <tr key={product.id} >
                             <td>
-                                <img src={product.image} alt={product.title} />
+                                <figure>
+                                    <img src={product.image} alt={product.title} />
+                                </figure>
                             </td>
                             <td>
-                                <div className="nameProduct">{product.title}</div>
-                                <div className="priceProduct">{product.priceFormatted} </div>
+                                <strong>{product.title}</strong>
+                                <span>{product.priceFormatted} </span>
                             </td>
                             <td >
-                                <div className="qtdButton">
+                                <div>
                                     <button type="button" onClick={() => decrement(product)}  >
                                         <MdRemoveCircleOutline size={20} />
                                     </button>
@@ -96,7 +98,7 @@ import * as CartActions from '../../store/modules/cart/actions'
                                 <strong> {product.subtotal} </strong>
                             </td>
                              <td  >
-                                <button type="button" onClick={() => dispatch(CartActions.removeFromCart(product.id))} className="btnRemove"   > 
+                                <button type="button" onClick={() => dispatch(CartActions.removeFromCart(product.id))} > 
                                     <MdDelete size={20}  />
                                 </button>
                             </td>

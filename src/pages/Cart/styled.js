@@ -4,15 +4,24 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div `
     padding: 30px;
     background: #FFF;
-    margin: 20px 100px;
+    margin: 30px 80px;
     border-radius: 5px;
 
+   @media (max-width: 460px) {
+       margin: 0;
+   }
 
     footer {
         margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 520px) {
+            flex-direction: column-reverse;
+            
+        }
+
 
         button {
             background: #573BA3;
@@ -23,6 +32,12 @@ export const Container = styled.div `
             padding: 15px 50px;
             text-transform: uppercase;
             transition: all ease .3s;
+
+            @media (max-width: 520px) {
+                margin-top: 20px;
+                width: 100%;
+                padding: 20px;
+            }
 
             &:hover {
                 opacity: 0.9;
@@ -43,6 +58,25 @@ export const Container = styled.div `
                 font-size: 26px;
                 margin-left: 5px;
             }
+
+            @media (max-width: 768px) {
+
+                strong {
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width: 460px) {
+                
+
+                span {
+                    font-size: 14px;
+                }
+
+                strong {
+                    font-size: 18px;
+                }
+            }
         }
     }
 `
@@ -50,62 +84,154 @@ export const Container = styled.div `
 
 export const CardProduct = styled.table `
     width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
 
     thead th {
         color: #888;
         text-align: left;
 
-        padding: 15px;
+        padding: 12px;
+
+        &:nth-child(3) {
+            text-align: center;
+        }
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #eee;
+
+        @media (max-width: 640px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
     }
 
     tbody td {
-        padding: 15px;
-        border-bottom: 1px solid #ccc;
+        padding: 12px;
+        
+        &:first-child {
+            @media (max-width: 640px) {
+                padding-left: 0;
+                padding-bottom: 0;
+            }        
+        }
+
+        &:nth-child(2) {
+        @media (max-width: 640px) {
+        flex: 1 1 60%;
+      }
+
+      @media (max-width: 385px) {
+        flex: 1;
+      }
+
+      span {
+        @media (max-width: 640px) {
+          font-size: 14px;
+          color: #666;
+        }
+      }
     }
 
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      @media (max-width: 640px) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (max-width: 640px) {
+        padding: 0;
+      }
+
+     
+      @media (max-width: 356px) {
+        flex: 1;
+
+        div {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      @media (max-width: 640px) {
+        flex: 1;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      @media (max-width: 356px) {
+        display: none;
+      }
+    }
+
+    &:nth-child(5) {
+      @media (max-width: 640px) {
+        padding: 12px 0;
+      }
+    }
+}
+
+    
     img {
-        height:150px;
+        height:100px;
         
     }
 
-    .nameProduct {
-        color: #333;
-        display: block
+    strong {
+    display: block;
+    color: #333;
+  }
+
+  span {
+    display: block;
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      color: #666;
+      padding: 6px;
+      width: 50px;
+      text-align: center;
+
+      @media (max-width: 640px) {
+        width: 36px;
+      }
     }
+  }
 
-    .priceProduct {
-        margin-top: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        display: block
+  button {
+    background: none;
+    border: 0;
+    padding: 6px 8px;
+
+    svg {
+      @media (max-width: 640px) {
+        width: 24px;
+        height: 24px;
+      }
     }
-
-    .qtdButton {
-        display: flex;
-        align-items: center;
-
-        input {
-            border: 1px solid #CCC;
-            border-radius: 4px;
-            color: #677;
-            width: 50px;
-            padding: 6px;
-            text-align: center;
-        }
-
-        button {
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-    }
-
-    .btnRemove {
-        border: none;
-        background: none;
-
-       
-    }
+  }
 ` 
 
 
@@ -117,7 +243,7 @@ export const EmptyCart = styled.div `
     
 
   @media (max-width: 560px) {
-    min-height: 300px;
+    min-height: 500px;
   }
 
   svg {

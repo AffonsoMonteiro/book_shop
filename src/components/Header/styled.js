@@ -21,12 +21,27 @@ export const Container = styled.div `
         align-items: center;
         justify-content: center;
 
+        svg {
+            font-size: 35px;
+        }
+
         span {
             margin-left: 10px;
             
         }
     }
 
+    @media (max-width: 768px) {
+        
+        .logo {
+            font-size: 20px;
+            padding: 25px 0;
+
+            svg {
+                font-size: 25px;
+            }
+        }
+    }
  `
 
 export const Cart = styled(Link) `
@@ -39,9 +54,15 @@ export const Cart = styled(Link) `
         opacity: 0.7;
     }
 
+    svg {
+            font-size: 35px;
+    }
+
     .cart {
+
         text-align: right;
         margin-right: 10px;
+
 
         strong {
             display: block;
@@ -53,6 +74,26 @@ export const Cart = styled(Link) `
             font-size: 12px;
             color: #CCC;
         }
+
+        
+    }
+
+    @media (max-width: 500px) {
+
+        .cart {
+            margin: 0;
+
+            strong {
+                font-size: 12px;
+            }   
+            
+        }
+
+        svg {
+            font-size: 25px;
+            margin-left: 10px;
+        }
+             
     }
 
   `
@@ -68,5 +109,9 @@ export const Promotions = styled.div `
 
         &:hover {
             opacity: .7;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 14px;
         }
 `
