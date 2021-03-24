@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { GiWhiteBook } from "react-icons/gi"
 import { MdShoppingCart } from 'react-icons/md'
 
 
-import { Container, Cart } from './styled'
+import { Container, Cart, Promotions } from './styled'
+import Modal from '../Modal'
+ 
 
+ export default function Header() {
 
-
- function Header({ cartSize }) {
+    const [ modalStatus, setModalStatus ] = useState(false)
     
+    const cartSize = useSelector(state => state.cart.length)
+
+    
+    function hamdleModal() {
+        setModalStatus(!modalStatus)
+    }
 
     return (
         <Container>
@@ -22,6 +30,10 @@ import { Container, Cart } from './styled'
                 </div>
             </Link>
 
+            <Promotions onClick={hamdleModal}>
+                 Promoção
+            </Promotions>
+
             <Cart to="/cart">
                 <div className="cart">
                     <strong>Meu carrinho</strong>
@@ -29,10 +41,8 @@ import { Container, Cart } from './styled'
                 </div>
                 <MdShoppingCart size={35} color="#FFF" />
             </Cart>
+            <Modal status={modalStatus} setStatus={setModalStatus} />
         </Container>
     )
 }
 
-export default connect( state => ({
-    cartSize: state.cart.length,
-}))(Header)

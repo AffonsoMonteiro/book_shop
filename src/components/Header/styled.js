@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 export const Container = styled.div `
-
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,3 +56,17 @@ export const Cart = styled(Link) `
     }
 
   `
+
+
+export const Promotions = styled.div `
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all ease .3s;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: .7;
+        }
+`

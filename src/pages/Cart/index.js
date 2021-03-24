@@ -13,16 +13,31 @@ import * as CartActions from '../../store/modules/cart/actions'
 
     const dispatch = useDispatch()
 
-    const total = useSelector(state => formatPrice( state.cart.reduce((totalSum, product) => {
-        return totalSum + product.price * product.amount
-        },  0)
-    ))
+    const { cart } = useSelector((state => state))
 
-    const cart = useSelector(state => state.cart.map(product => ({
-        ...product,
-        subtotal: formatPrice(product.price * product.amount)
-    })))
+    
+    const subtotal = cart.reduce( ( totalSum, product ) => totalSum + (product.price * product.amount ), 0)
+   
+    const cartItemsQuantity = cart.length
+    
+    function getDiscount (itemsQuantity, subtotal) {
+        if (itemsQuantity >= 5) {
+            return subtotal * 25 / 100
+        }
+        
+        const otherDiscounts = {
+            1: 0,
+            2: subtotal * 5 / 100,
+            3: subtotal * 10 / 100,
+            4: subtotal * 20 / 100,
+        }
 
+        return otherDiscounts[itemsQuantity]
+    }
+
+    const discount = getDiscount(cartItemsQuantity, subtotal) || 0
+
+    const total = ( subtotal - discount) || 0
 
     function increment(product) {
         dispatch(CartActions.updateAmount(product.id, product.amount + 1))
@@ -82,8 +97,20 @@ import * as CartActions from '../../store/modules/cart/actions'
                 <button type="button" >Finalizar pedido</button>
 
                 <div className="total">
-                    <span>Total</span>
-                    <strong> {total} </strong>
+                    <div>
+                        <span>Subtotal</span>
+                        <strong> {formatPrice(subtotal) } </strong>
+                    </div> 
+                   
+                    <div >
+                        <span>Disconto</span>
+                        <strong> {formatPrice(discount)} </strong>
+                    </div>
+                    
+                    <div>
+                        <span>Total</span>
+                        <strong> { formatPrice(total)} </strong>
+                    </div> 
                 </div>
             </footer>
       
