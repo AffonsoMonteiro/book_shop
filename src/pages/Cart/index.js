@@ -1,10 +1,10 @@
 import React from 'react';
-import {MdRemoveCircleOutline, MdAddCircleOutline, MdDelete} from 'react-icons/md'
+import {MdRemoveCircleOutline, MdAddCircleOutline, MdDelete, MdRemoveShoppingCart} from 'react-icons/md'
 
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import { Container, CardProduct } from './styled'
+import { Container, CardProduct, EmptyCart, StartShopping } from './styled'
 import { formatPrice } from '../../helpers/format'
 
 import * as CartActions from '../../store/modules/cart/actions'
@@ -49,7 +49,19 @@ import * as CartActions from '../../store/modules/cart/actions'
     
     return (
         <Container>
-            <CardProduct >
+            {cart.length === 0 ? (
+                <EmptyCart>
+                    <MdRemoveShoppingCart />
+        
+                    <div>
+                    <h2>Oops...</h2>
+                    <p>Parece que seu carrinho de compras está vazio!</p>
+                    <StartShopping to="/">Start Shopping</StartShopping>
+                    </div>
+                </EmptyCart>
+            ) : (
+                <>
+                    <CardProduct >
                 <thead>
                     <tr>
                         < th />
@@ -113,6 +125,9 @@ import * as CartActions from '../../store/modules/cart/actions'
                     </div> 
                 </div>
             </footer>
+                </>
+            )}
+            
       
 
         </Container>

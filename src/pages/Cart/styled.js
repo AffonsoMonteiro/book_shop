@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div `
     padding: 30px;
@@ -106,3 +106,53 @@ export const CardProduct = styled.table `
        
     }
 ` 
+
+
+export const EmptyCart = styled.div `
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  @media (max-width: 560px) {
+    min-height: 300px;
+  }
+
+  svg {
+    font-size: 260px;
+    color: #f3f3f6;
+    position: absolute;
+  }
+
+  div {
+    z-index: 1;
+    text-align: center;
+
+    h2 {
+      font-size: 56px;
+    }
+
+    p {
+      margin: 12px 0 28px;
+      font-size: 16px;
+    }
+  }
+`
+
+export const StartShopping = styled(Link) `
+    background: #7159c1;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+
+   &:hover {
+       opacity: .9;
+   }
+`
