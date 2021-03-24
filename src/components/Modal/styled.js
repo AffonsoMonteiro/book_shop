@@ -6,6 +6,7 @@ export const Container = styled.div `
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 9999;
 
     background: rgba(0, 0, 0, 0.7);
     display: ${props => props.status ? 'flex' : 'none'};
