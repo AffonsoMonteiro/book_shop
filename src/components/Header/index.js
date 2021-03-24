@@ -31,7 +31,7 @@ import Modal from '../Modal'
             </Link>
 
             <Promotions onClick={hamdleModal}>
-                 Promoção
+                 Promoções
             </Promotions>
 
             <Cart to="/cart">
