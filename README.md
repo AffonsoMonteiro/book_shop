@@ -7,7 +7,7 @@
 </h4>
 
 <div align="center">
- <img src="./public/github/bookShop" alt="demo-web" height="425" />
+ <img src="./public/github/bookShop.png" alt="BookShop" height="425" />
 </div>
 
 ![App Screenshot](https://res.cloudinary.com/lukemorales/image/upload/v1563042321/readme_logos/rocketshoes_readme_swvhr9.png)
