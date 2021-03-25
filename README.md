@@ -6,8 +6,11 @@
   BookShop | with React and Redux.
 </h4>
 
+<div align="center">
+ <img src="./public/github/bookShop" alt="demo-web" height="425" />
+</div>
 
-
+![App Screenshot](https://res.cloudinary.com/lukemorales/image/upload/v1563042321/readme_logos/rocketshoes_readme_swvhr9.png)
 <p align="center">
   <a href="https://rocketshoes.netlify.com/" target="_blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1563043495/readme_logos/demo_on_netlify_bbuvjz.png">
@@ -18,7 +21,7 @@
 
 -  [ReactJS](https://reactjs.org/)
 -  [Redux](https://redux.js.org/)
--  [React Router v4](https://github.com/ReactTraining/react-router)
+-  [React Router](https://github.com/ReactTraining/react-router)
 -  [Axios](https://github.com/axios/axios)
 -  [Immer](https://github.com/immerjs/immer)
 -  [Polished](https://polished.js.org/)
