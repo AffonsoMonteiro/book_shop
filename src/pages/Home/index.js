@@ -21,7 +21,7 @@ export default function Home() {
             const response = await api.get('products')
 
             const data = response.data.map(product => ({
-                ... product,
+                ...product,
                 priceFormatted: formatPrice(product.price)
             }))
             setProducts(data)
