@@ -33,7 +33,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/AffonsoMonteiro/book_shop
 
 # Go into the repository
-$ cd react-rocketshoes
+$ cd book_shop
 
 # Install dependencies
 $ yarn install
