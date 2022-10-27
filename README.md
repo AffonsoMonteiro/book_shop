@@ -22,7 +22,7 @@
 -  [Polished](https://polished.js.org/)
 -  [styled-components](https://www.styled-components.com/)
 -  [React-Icons](https://react-icons.netlify.com/)
--  [json-server](https://github.com/typicode/json-server)
+-  [mockAPI](https://www.mockapi.io/)
 
 ## :information_source: How To Use
 
@@ -33,7 +33,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/AffonsoMonteiro/book_shop
 
 # Go into the repository
-$ cd react-rocketshoes
+$ cd book_shop
 
 # Install dependencies
 $ yarn install
@@ -41,8 +41,6 @@ $ yarn install
 # Run the app
 $ yarn start
 
-# Run json-server
-$ json-server --watch db.json
 ```
 
 
